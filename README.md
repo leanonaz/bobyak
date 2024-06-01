@@ -11,9 +11,9 @@
 - **김하린** : 팀장, 프론트엔드 개발자, UI 디자이너
 - **김석현** : 프론트엔드 개발자
 
-## 🚀 개발환경
-- **IDE** : VSC
-- **Framework** : HTML, CSS, Javascript
+## 🚀 Stacks
+- **Enviroment** : VSC
+- **Development** : HTML, CSS, Javascript
 
 
 ## 📌 주요 기능
