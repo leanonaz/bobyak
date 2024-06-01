@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>알림함</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+
+    <style>
+        .pod-info {
+            margin-left: 10%;
+            max-width: 100%;
+            text-align: left;
+        }
+
+        .signal {
+            font-weight: 800;
+            font-size: 17px;
+            text-align: left;
+        }
+
+        .signal-detail {
+            font-weight: 500;
+            font-size: 15px;
+            text-align: left;
+        }
+
+        .time {
+            font-weight: 650;
+            font-size: 16px;
+            text-align: right;
+        }
+
+        span.hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('span').hover(function () {
+                // 스타일을 변경합니다.
+                $('span').addClass('hover');
+            }, function () {
+                // 스타일을 변경합니다.
+                $('span').removeClass('hover');
+            });
+        }); 
+        function showAlert() {
+            alert(' 신청하신 \'콩불 팟\'에 참여가 승인되었습니다. \n 즐거운 맛집 탐방 되세요!🥳');
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="nav">
+        <ul class="navigation" style="padding: 20px; margin: 0;">
+            <li style="list-style: none; margin-top:60px; margin-bottom: 30px;">
+                <a href="밥약.html" style="display: inline-block;">
+                    <img src="./icon/free-icon-bowl-rice-10856766.png" width="20px"
+                        style="vertical-align: middle; margin-right: 10px;">
+                    <p class="font16" style="display: inline-block; vertical-align: middle; margin: 0;"> 홈</p>
+                </a>
+            </li>
+            <li style="list-style: none; margin-bottom: 30px;">
+                <a href="알림함.html" style="display: inline-block;">
+                    <img src="./icon/free-icon-bells-7124213.png" width="20px"
+                        style="vertical-align: middle; margin-right: 10px;">
+                    <p class="font16" style="display: inline-block; vertical-align: middle; margin: 0;"> 알림함</p>
+                </a>
+                <div id="notificationArea" style="display: inline-block; vertical-align: middle;"></div>
+            </li>
+            <li style="list-style: none;">
+                <a href="#" style="display: inline-block;">
+                    <img src="./icon/free-icon-settings-cog-70314.png" width="20px"
+                        style="vertical-align: middle; margin-right: 10px;">
+                    <p class="font16" style="display: inline-block; vertical-align: middle; margin: 0;"> 설정</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <header class="header" style="height: 150px;">
+        <button class="user-button" onClick="location.href='사용자정보.html'">[ 김민수 ] 님</button>
+    </header>
+
+    <section class="section" style="height: 1550px;">
+        <article class="article-pod"></a>
+            <p class="pod-title">알림함</p>
+            <p class="pod-info">
+            <table>
+                <tr>
+                    <td width="100"><span class="signal">승인 완료</span></td>
+                    <td width="370" onclick="showAlert()"><span class="signal-detail">콩불 팟 참여 승인 🎉</span></td>
+                    <td width="100"><span class="time">오후 12:30</span></td>
+                </tr>
+            </table>
+            </p>
+            <p class="pod-info">&nbsp;</p>
+        </article>
+    </section>
+    <footer class="footer">
+        <p> 
+            <span>김하린. 김석현<br></span>
+            <span>leanonaz@gmail.com<br></span>
+            <span>Copyright 2024. All Rights Reserved.</span>
+        </p>
+    </footer>
+</body>
+
+</html>

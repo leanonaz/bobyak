@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>밥비티아이</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bbti.css">
+    <script type="text/javascript" src="script.js"></script> 
+</head>
+<body>
+    <div class="container">
+        <h1>밥BTI 테스트🍚</h1>
+        <div class="question" id="question1" style="display: none;">
+            <p>🔔 주문할게요~! 식사 메뉴를 결정하고 나서 나는,</p>
+            <div class="answers">
+                <div class="answer" onclick="selectAnswer('N')">큰 소리로 주문한다.</div>
+                <div class="answer" onclick="selectAnswer('Q')">직원분과 눈이 마주칠 때까지 기다리기.</div>            
+            </div>
+        </div>
+        <div class="question" id="question2" style="display: none;">
+            <p>밥을 먹을 때 나는 소리, 어느 정도까지 괜찮을까?</p>
+            <div class="answers">
+                <div class="answer" onclick="selectAnswer('N')">씹는 소리 정도는 괜찮아!</div>
+                <div class="answer" onclick="selectAnswer('Q')">거슬리지 않게 조용히..</div>            
+            </div>
+        </div>
+        <div class="question" id="question3" style="display: none;">
+            <p>밥을 먹으면서 상대방이 말을 걸어온다. 당신의 마음은?</p>
+            <div class="answers">
+                <div class="answer" onclick="selectAnswer('N')">아싸! 말을 걸어주면 좋아 🎵</div>
+                <div class="answer" onclick="selectAnswer('Q')">조용히 밥이나 먹었으면 좋겠다.</div>            
+            </div>
+        </div>
+        <div class="question" id="question4" style="display: none;">
+            <p>보통 밥을 먹는 장소는?</p>
+            <div class="answers">
+                <div class="answer" onclick="selectAnswer('S')">밖에서 먹는다. 🚶</div>
+                <div class="answer" onclick="selectAnswer('F')">학식 먹는다. 🏫</div>            
+            </div>
+        </div>
+        <div class="question" id="question5" style="display: none;">
+            <p>나에게..밥이란? 💭</p>
+            <div class="answers">
+                <div class="answer" onclick="selectAnswer('S')">몸과 마음의 여유를 채우는 시간🍵</div>
+                <div class="answer" onclick="selectAnswer('F')">배만 채우면 됨.</div>            
+            </div>
+        </div>
+        <div class="question" id="question6" style="display: none;">
+            <p>내가 밥을 먹는 속도는?</p>
+            <div class="answers">
+                <div class="answer" onclick="selectAnswer('F')">빠른 편이다.</div>
+                <div class="answer" onclick="selectAnswer('S')">느린 편이다.</div>            
+            </div>
+        </div>
+        <div class="question" id="question7" style="display: none;">
+            <p>테이블 위에 놓인 음식, 나는?</p>
+            <div class="answers">
+                <div class="answer" onclick="selectAnswer('T')">나눠 먹는다.</div>
+                <div class="answer" onclick="selectAnswer('A')">각자 먹고 싶다.</div>            
+            </div>
+        </div>
+        <div class="question" id="question8" style="display: none;">
+            <p>꽤나 맛있었던 식당. 꼭 기억해두고 📌 다음에는..</p>
+            <div class="answers">
+                <div class="answer" onclick="selectAnswer('A')">혼자 와서 편하게 먹어야겠다.</div>
+                <div class="answer" onclick="selectAnswer('T')">사람들에게 추천해줘야지~</div>            
+            </div>
+        </div>
+        <div class="question" id="question9" style="display: none;">
+            <p>밥을 다 먹은 당신, 이제</p>
+            <div class="answers">
+                <div class="answer" onclick="selectAnswer('T')">다음 장소로 함께 이동!</div>
+                <div class="answer" onclick="selectAnswer('A')">깔끔하게 각자 갈길 간다. 👋</div>            
+            </div>
+        </div>
+        <div id="result-card" class="result-card">
+        <p>결과: </p>
+        <span class="result-name"></span>
+        <img alt="결과 이미지">
+        <p class="result-description" id="description"></p>
+        <p class="result-match" id="match"></p>
+        <button class="home-button" onclick="goHome()">홈으로 돌아가기</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>밥약</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=106567b7be8858921f87511c698558a7"></script>
+    <script type="text/javascript" src="script.js"></script> 
+    
+</head>
+
+<body>
+    <button class="mobile-button" onclick="loadMobileCSS()">모바일 버전으로 보기</button>
+
+    <nav class="nav">
+        <ul class="navigation" style="padding: 20px; margin: 0;">
+            <li style="list-style: none; margin-top:60px; margin-bottom: 30px;" >
+                <a href="밥약.html" style="display: inline-block;">
+                    <img src="./icon/free-icon-bowl-rice-10856766.png" width="20px" style="vertical-align: middle; margin-right: 10px;">
+                    <p class="font16" style="display: inline-block; vertical-align: middle; margin: 0;"> 홈</p>
+                </a>
+            </li>  
+            <li style="list-style: none; margin-bottom: 30px;">
+                <a href="알림함.html" style="display: inline-block;">
+                    <img src="./icon/free-icon-bells-7124213.png" width="20px" style="vertical-align: middle; margin-right: 10px;">
+                    <p class="font16"style="display: inline-block; vertical-align: middle; margin: 0;"> 알림함</p>
+                </a>
+                <div id="notificationArea" style="display: inline-block; vertical-align: middle;"></div>
+            </li>
+            <li style="list-style: none;">
+                <a href="스플래쉬.html" style="display: inline-block;">
+                    <img src="./icon/free-icon-settings-cog-70314.png" width="20px" style="vertical-align: middle; margin-right: 10px;">
+                    <p class="font16"style="display: inline-block; vertical-align: middle; margin: 0;"> 설정</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <header class="header">
+        <p><br></p>
+        <p class="bold-title title-animation"> 함께 밥 먹을 친구를 찾고, <br></p>
+        <p class="bold-title title-animation"> 새로운 캠퍼스 라이프를 즐겨보세요.</p>
+        <button class="user-button" onClick="location.href='사용자정보.html'">[ 김민수 ] 님</button>
+    </header>
+
+
+    <section class="section">
+        <div class="container">
+            <a href="밥친구찾기.html">
+                <article class="article bob">
+                    <p class="font26">🐧<br></p>
+                    <p class="font16"><br>새로운<br></p>
+                    <p class="font26">밥 친구 찾기</p>
+                </article>
+            </a>
+            <article class="article mat" onclick="goToScroll('article-matzip')">
+                <p class="font26">😋<br></p>
+                <p class="font16"><br>이거 먹을래!<br></p>
+                <p class="font26">맛집 팟 참여</p>
+            </article>
+            <a href="밥비티아이.html">
+                <article class="article mbti">
+                    <p class="font26">🍀<br></p>
+                    <p class="font16"><br>나만의 식사 성향 찾기<br></p>
+                    <p class="font26">밥BTI</p>
+                </article>
+            </a>
+
+        </div>
+
+
+        <div class="container">
+            <article class="article-matzip">
+                <p class="font22" style="display: inline-block; border-bottom: 1px solid #ddd; padding-bottom: 15px;width: 80%;">
+                    경기대학교<br>근처 맛집<br>
+                </p>
+                <p></p>
+                <a href="#" onclick="showArticle(event, '콩불')" class="font18">콩불<br><br></a>
+                <a href="#" onclick="showArticle(event, '방콕스토리')" class="font18">방콕스토리<br><br></a>
+                <a href="#" onclick="showArticle(event, '겐코')" class="font18">겐코<br><br></a>
+                <a href="#" onclick="showArticle(event, '유가네 닭갈비')" class="font18">유가네 닭갈비<br><br></a>
+                <a href="#" onclick="showArticle(event, '광교연탄불고기')" class="font18">광교연탄불고기<br><br></a>
+            </article>
+
+            <article class="article-map" id="map">
+            </article>
+            <script>
+                // 지도 API
+                var container = document.getElementById('map');
+                var options = {
+                    center: new kakao.maps.LatLng(37.29985798437517, 127.04426696810418),
+                    level: 2
+                };
+
+                var map = new kakao.maps.Map(container, options);
+
+                // 마커를 표시할 위치와 title 객체 배열
+                var positions = [
+                    {
+                        title: '콩불', 
+                        latlng: new kakao.maps.LatLng(37.2997811, 127.0446029)
+                    },
+                    {
+                        title: '방콕스토리', 
+                        latlng: new kakao.maps.LatLng(37.298994, 127.0438405)
+                    },
+                    {
+                        title: '겐코',
+                        latlng: new kakao.maps.LatLng(37.2992854,127.0436816)
+                    },
+                    {
+                        title: '유가네 닭갈비',
+                        latlng: new kakao.maps.LatLng(37.29985798437517, 127.04426696810418)
+                    },
+                    {
+                        title: '광교연탄불고기',
+                        latlng: new kakao.maps.LatLng(37.2995752, 127.0450133)
+                    }
+                ];
+
+                // 마커 이미지의 이미지 주소
+                var imageSrc = "http://myweb.kyonggi.ac.kr/users/202013756/emoji-pin.png"; 
+                
+                // 모든 마커를 저장할 배열
+                var markers = [];     
+
+                for (var i = 0; i < positions.length; i ++) {
+                    
+                    // 마커 이미지의 이미지 크기
+                    var imageSize = new kakao.maps.Size(35, 35); 
+                    
+                    // 마커 이미지를 생성   
+                    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 
+                    
+                    // 마커를 생성
+                    var marker = new kakao.maps.Marker({
+                        map: map, // 마커를 표시할 지도
+                        position: positions[i].latlng, // 마커를 표시할 위치
+                        title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀 표시
+                        image : markerImage // 마커 이미지 
+                    });
+
+                    // 생성된 마커를 배열에 추가
+                    markers.push(marker);
+                }           
+            </script>
+
+        </div>
+
+        <div class="container">
+            <article id="oldArticle" class="article-pod">
+                <p class="font26">🔥 지금 핫한 맛집 팟</p>
+                <p class="pod-info">다 핫해요<br><br></p>
+            </article>
+            <article id="newArticle" class="article-pod" style="position: relative;">
+            </article>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <p> 
+            <span>김하린. 김석현<br></span>
+            <span>leanonaz@gmail.com<br></span>
+            <span>Copyright 2024. All Rights Reserved.</span>
+        </p>
+    </footer>
+</body>
+
+</html>

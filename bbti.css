@@ -1,0 +1,107 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    background-color: #f9f9f9;
+}
+h1 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 26px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+div p {
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+}
+.answers {
+    padding: 50px;
+}
+.answer {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: #6382F3;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+.answer:hover {
+    background-color: #4a60b2;
+}
+.result-card {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #6382F3;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+.result-card p {
+    font-size: 18px;
+    font-weight: 600;
+}
+.result-card img {
+    margin-top: 20px;
+    max-width: 100px;
+}
+.result-name {
+    display: block;
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #6382F3;
+}
+#description {
+    margin-top: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    line-height: 1.8em;
+    color: #7b7a7a;
+}
+#match {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.home-button {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    background-color: #828fe9;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.home-button:hover {
+    background-color: #6d78c2;
+}

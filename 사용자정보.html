@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 정보</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .logout-button {
+            background-color: rgb(196, 196, 196);
+            color: black;
+            font-size: 16px;
+            border-radius: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+    </style>
+    <script>
+    </script>
+</head>
+
+<body>
+    <nav class="nav">
+        <ul class="navigation" style="padding: 20px; margin: 0;">
+            <li style="list-style: none; margin-top:60px; margin-bottom: 30px;" >
+                <a href="밥약.html" style="display: inline-block;">
+                    <img src="./icon/free-icon-bowl-rice-10856766.png" width="20px" style="vertical-align: middle; margin-right: 10px;">
+                    <p class="font16" style="display: inline-block; vertical-align: middle; margin: 0;"> 홈</p>
+                </a>
+            </li>  
+            <li style="list-style: none; margin-bottom: 30px;">
+                <a href="알림함.html" style="display: inline-block;">
+                    <img src="./icon/free-icon-bells-7124213.png" width="20px" style="vertical-align: middle; margin-right: 10px;">
+                    <p class="font16"style="display: inline-block; vertical-align: middle; margin: 0;"> 알림함</p>
+                </a>
+                <div id="notificationArea" style="display: inline-block; vertical-align: middle;"></div>
+            </li>
+            <li style="list-style: none;">
+                <a href="#" style="display: inline-block;">
+                    <img src="./icon/free-icon-settings-cog-70314.png" width="20px" style="vertical-align: middle; margin-right: 10px;">
+                    <p class="font16"style="display: inline-block; vertical-align: middle; margin: 0;"> 설정</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <header class="header" style="height: 150px;">
+        <button class="user-button" onClick="location.href='사용자정보.html'">[ 김민수 ] 님</button>
+    </header>
+
+    <section class="section" style="height: 1550px;">
+        <article class="article-pod"></a>
+            <p class="pod-title">내 정보</p><br><br>
+            <img id="picture" src="./icon/free-icon-user-9634070.png" height="80px">
+            <p class="font22">김민수</p>
+            <hr style="border: 1px solid #ddd" width="30%">
+            <div>
+                <p class="pod-info"><br> 🏫 경기대학교</p>
+                <p class="pod-info"> 📖 21학번</p>
+                <p class="pod-info"> ✏️ 컴퓨터공학과</p>
+                <p class="pod-info"> 🤍 뜨끈한 국밥</p>
+            </div>
+            <span class="logout-button" onClick="location.href='로그인_회원가입.html'">로그아웃</span>
+        </article>
+    </section>
+    <footer class="footer">
+        <p> 
+            <span>김하린. 김석현<br></span>
+            <span>leanonaz@gmail.com<br></span>
+            <span>Copyright 2024. All Rights Reserved.</span>
+        </p>
+    </footer>
+</body>
+
+</html>
